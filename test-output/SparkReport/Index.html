@@ -1,0 +1,2839 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Extent</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c952cc003431b643d7a73337421ff42b75bac784/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Grasshopper Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Feb 15, 2022 04:04:28 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Feb 15, 2022 04:04:28 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Feb 15, 2022 04:07:35 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>1</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>2</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='33%'>
+<b>1</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='66%'><b>2</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='75%'><b>12</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='25%'><b>4</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='83%'><b>237</b> steps passed</small></div>
+<div>
+<small data-tooltip='1%'><b>4</b> steps failed,
+<b>44</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Verify Add WooCommerce Store Feature":80.061,"Verify Print Label Feature of SPE Ecomm Application":185.453,"Verify Search Order Feature of SPE Ecomm Application":59.715
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@PrintLabelWooCommerce</td>
+<td>3</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@Sanity</td>
+<td>9</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>81.818%</td>
+</tr>
+<tr>
+<td>@AddWooCommerceStore</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@SearchWooCommerceStore</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@WooCommerce</td>
+<td>12</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>75%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>AppName</td>
+<td>SPE Ecomm Application</td>
+</tr>
+<tr>
+<td>user</td>
+<td>adheer.khandelwal@pb.com</td>
+</tr>
+<tr>
+<td>build</td>
+<td>SPE Ecom App v 0.4</td>
+</tr>
+<tr>
+<td>os</td>
+<td>Windows10</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 1,
+failParent: 2,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 12,
+failChild: 4,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 237,
+failGrandChild: 4,
+warningGrandChild: 0,
+skipGrandChild: 44,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@PrintLabelWooCommerce</a><a class="dropdown-item" href="#">@Sanity</a><a class="dropdown-item" href="#">@AddWooCommerceStore</a><a class="dropdown-item" href="#">@SearchWooCommerceStore</a><a class="dropdown-item" href="#">@WooCommerce</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Add WooCommerce Store Feature</p>
+            <p class="text-sm">
+              <span>16:04:29 PM</span> / <span>00:01:20:061</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Verify Add WooCommerce Store Feature</h5>
+<span class='badge badge-success'>02.15.2022 16:04:29</span>
+<span class='badge badge-danger'>02.15.2022 16:05:49</span>
+<span class='badge badge-default'>00:01:20:061</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verify text of WooCommerce hover icons Add Store pop up window</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_enters_valid_username_and_password()">
+                <span>When user enters valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.click_on_sign_in_button()">
+                <span>And click on sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open()">
+                <span>Then SendPro Enterprise home page should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_is_on_send_pro_enterprise_home_page()">
+                <span>Given user is on SendPro Enterprise home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_clicks_button(java.lang.String)">
+                <span>When user clicks "Add Store" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.add_store_modal_pop_up_should_open()">
+                <span>Then Add Store Modal pop up should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.select_store_label_should_be_displayed()">
+                <span>And Select Store Label should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.select_store_dropdwon_should_be_displayed()">
+                <span>And Select Store dropdwon should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.user_selects_store_option_from_dropdown(java.lang.String)">
+                <span>When user selects "Woo-Commerce" store option from dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.label_should_be_displayed_on_question_mark_icon_for_woocommerce(java.lang.String)">
+                <span>Then "WooCommerce store url" label should be displayed on question mark icon for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.label_should_be_displayed_on_question_mark_icon_for_woocommerce(java.lang.String)">
+                <span>And "WooCommerce store key" label should be displayed on question mark icon for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.label_should_be_displayed_on_question_mark_icon_for_woocommerce(java.lang.String)">
+                <span>And "WooCommerce store is onDemand or not" label should be displayed on question mark icon for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.label_should_be_displayed_on_question_mark_icon_for_woocommerce(java.lang.String)">
+                <span>And "WooCommerce store bridge URL" label should be displayed on question mark icon for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.label_should_be_displayed_on_question_mark_icon_for_woocommerce(java.lang.String)">
+                <span>And "WooCommerce store root path" label should be displayed on question mark icon for woocommerce</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Verify text of WooCommerce store labels Add Store pop up window</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_enters_valid_username_and_password()">
+                <span>When user enters valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.click_on_sign_in_button()">
+                <span>And click on sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open()">
+                <span>Then SendPro Enterprise home page should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_is_on_send_pro_enterprise_home_page()">
+                <span>Given user is on SendPro Enterprise home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_clicks_button(java.lang.String)">
+                <span>When user clicks "Add Store" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.add_store_modal_pop_up_should_open()">
+                <span>Then Add Store Modal pop up should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.select_store_label_should_be_displayed()">
+                <span>And Select Store Label should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.select_store_dropdwon_should_be_displayed()">
+                <span>And Select Store dropdwon should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.user_selects_store_option_from_dropdown(java.lang.String)">
+                <span>When user selects "Woo-Commerce" store option from dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.label_should_be_displayed_for_woocommerce(java.lang.String)">
+                <span>Then "Store Url" label should be displayed for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.label_should_be_displayed_for_woocommerce(java.lang.String)">
+                <span>And "Store Key" label should be displayed for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.label_should_be_displayed_for_woocommerce(java.lang.String)">
+                <span>And "On Demand" label should be displayed for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.label_should_be_displayed_for_woocommerce(java.lang.String)">
+                <span>And "Bridge Url" label should be displayed for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.label_should_be_displayed_for_woocommerce(java.lang.String)">
+                <span>And "Store Root" label should be displayed for woocommerce</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="4"><span class="badge log pass-bg mr-2">Pass</span>Verify user is able to select woocommerce store from Select Store dropdown</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_enters_valid_username_and_password()">
+                <span>When user enters valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.click_on_sign_in_button()">
+                <span>And click on sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open()">
+                <span>Then SendPro Enterprise home page should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_is_on_send_pro_enterprise_home_page()">
+                <span>Given user is on SendPro Enterprise home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_clicks_button(java.lang.String)">
+                <span>When user clicks "Add Store" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.add_store_modal_pop_up_should_open()">
+                <span>Then Add Store Modal pop up should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.select_store_label_should_be_displayed()">
+                <span>And Select Store Label should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.select_store_dropdwon_should_be_displayed()">
+                <span>And Select Store dropdwon should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.user_selects_store_option_from_dropdown(java.lang.String)">
+                <span>When user selects "Woo-Commerce" store option from dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.field_should_be_displayed_for_woocommerce(java.lang.String)">
+                <span>Then "Store URL" field should be displayed for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.field_should_be_displayed_for_woocommerce(java.lang.String)">
+                <span>And "Store Key" field should be displayed for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.field_should_be_displayed_for_woocommerce(java.lang.String)">
+                <span>And "On Demand" field should be displayed for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.field_should_be_displayed_for_woocommerce(java.lang.String)">
+                <span>And "Bridge Url" field should be displayed for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.field_should_be_displayed_for_woocommerce(java.lang.String)">
+                <span>And "Store Root" field should be displayed for woocommerce</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="5"><span class="badge log pass-bg mr-2">Pass</span>Validate Onboarding success message when user onboard the woocommerce store and validate new store should be displayed on view store</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_enters_valid_username_and_password()">
+                <span>When user enters valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.click_on_sign_in_button()">
+                <span>And click on sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open()">
+                <span>Then SendPro Enterprise home page should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_is_on_send_pro_enterprise_home_page()">
+                <span>Given user is on SendPro Enterprise home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_clicks_button(java.lang.String)">
+                <span>When user clicks "Add Store" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.add_store_modal_pop_up_should_open()">
+                <span>Then Add Store Modal pop up should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.select_store_label_should_be_displayed()">
+                <span>And Select Store Label should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.select_store_dropdwon_should_be_displayed()">
+                <span>And Select Store dropdwon should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.user_selects_store_option_from_dropdown(java.lang.String)">
+                <span>When user selects "Woo-Commerce" store option from dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.user_enters_woo_commerce_onboard_details(io.cucumber.datatable.DataTable)">
+                <span>And user enters WooCommerce onboard details</span>
+      <div><table class='markup-table table '><tr><td>store_url</td><td>store_key</td></tr><tr><td>https://sendprowoocom.azurewebsites.net</td><td>c770ee62ef5220408fbc3297a8a3e102</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.click_on_register_button_for_woocommerce()">
+                <span>And Click on Register button for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.onboard_woo_commerce_success_response_should_recieved()">
+                <span>Then Onboard WooCommerce Success Response should recieved</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_clicks_button(java.lang.String)">
+                <span>When user clicks "View Store" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.view_store_modal_pop_up_should_open()">
+                <span>Then View Store Modal pop up should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddStoreSteps.verify_disconnect_store_button_is_enabled()">
+                <span>And verify disconnect store button is enabled</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddStoreSteps.verify_woocommerce_store_added_in_the_list()">
+                <span>And verify woocommerce store added in the list</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="6"><span class="badge log pass-bg mr-2">Pass</span>Validate Error message when user enters invalid store url and click on register button</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_enters_valid_username_and_password()">
+                <span>When user enters valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.click_on_sign_in_button()">
+                <span>And click on sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open()">
+                <span>Then SendPro Enterprise home page should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_is_on_send_pro_enterprise_home_page()">
+                <span>Given user is on SendPro Enterprise home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_clicks_button(java.lang.String)">
+                <span>When user clicks "Add Store" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.add_store_modal_pop_up_should_open()">
+                <span>Then Add Store Modal pop up should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.select_store_label_should_be_displayed()">
+                <span>And Select Store Label should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.select_store_dropdwon_should_be_displayed()">
+                <span>And Select Store dropdwon should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.user_selects_store_option_from_dropdown(java.lang.String)">
+                <span>When user selects "Woo-Commerce" store option from dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.user_enters_woo_commerce_onboard_details(io.cucumber.datatable.DataTable)">
+                <span>And user enters WooCommerce onboard details</span>
+      <div><table class='markup-table table '><tr><td>store_url</td><td>store_key</td></tr><tr><td>ajajsssh</td><td>c770ee62ef5220408fbc3297a8a3e102</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.click_on_register_button_for_woocommerce()">
+                <span>And Click on Register button for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.error_message_should_display_on_woocommerce_add_store_window(java.lang.String)">
+                <span>Then "Parameter 'store_url' is not valid. The required type of parameter is valid URL." error message should display on woocommerce add store window</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="7"><span class="badge log pass-bg mr-2">Pass</span>Validate Error message when user enters blank store key and click on register button</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_enters_valid_username_and_password()">
+                <span>When user enters valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.click_on_sign_in_button()">
+                <span>And click on sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open()">
+                <span>Then SendPro Enterprise home page should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_is_on_send_pro_enterprise_home_page()">
+                <span>Given user is on SendPro Enterprise home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_clicks_button(java.lang.String)">
+                <span>When user clicks "Add Store" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.add_store_modal_pop_up_should_open()">
+                <span>Then Add Store Modal pop up should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.select_store_label_should_be_displayed()">
+                <span>And Select Store Label should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.select_store_dropdwon_should_be_displayed()">
+                <span>And Select Store dropdwon should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.user_selects_store_option_from_dropdown(java.lang.String)">
+                <span>When user selects "Woo-Commerce" store option from dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.user_enters_woo_commerce_onboard_details(io.cucumber.datatable.DataTable)">
+                <span>And user enters WooCommerce onboard details</span>
+      <div><table class='markup-table table '><tr><td>store_url</td><td>store_key</td></tr><tr><td>https://sendprowoocom.azurewebsites.net</td><td>6be51814a60f6543fd3f51d4e4e75804</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.user_clears_field_for_woocommerce(java.lang.String)">
+                <span>And user clears "store_key" field for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.click_on_register_button_for_woocommerce()">
+                <span>And Click on Register button for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.error_message_should_display_on_woocommerce_add_store_window(java.lang.String)">
+                <span>Then "Storekey can't be blank" error message should display on woocommerce add store window</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="11"><span class="badge log pass-bg mr-2">Pass</span>Validate Error message when user click on register button without entering required woocommerce store details</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_enters_valid_username_and_password()">
+                <span>When user enters valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.click_on_sign_in_button()">
+                <span>And click on sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open()">
+                <span>Then SendPro Enterprise home page should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_is_on_send_pro_enterprise_home_page()">
+                <span>Given user is on SendPro Enterprise home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_clicks_button(java.lang.String)">
+                <span>When user clicks "Add Store" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.add_store_modal_pop_up_should_open()">
+                <span>Then Add Store Modal pop up should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.select_store_label_should_be_displayed()">
+                <span>And Select Store Label should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.select_store_dropdwon_should_be_displayed()">
+                <span>And Select Store dropdwon should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.user_selects_store_option_from_dropdown(java.lang.String)">
+                <span>When user selects "Woo-Commerce" store option from dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.click_on_register_button_for_woocommerce()">
+                <span>And Click on Register button for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.error_message_should_display_on_woocommerce_add_store_window(java.lang.String)">
+                <span>Then "Woocommerce storeURL can't be blank" error message should display on woocommerce add store window</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="17"><span class="badge log pass-bg mr-2">Pass</span>Validate Error message when user enters invalid store key and click on register button</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_enters_valid_username_and_password()">
+                <span>When user enters valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.click_on_sign_in_button()">
+                <span>And click on sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open()">
+                <span>Then SendPro Enterprise home page should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_is_on_send_pro_enterprise_home_page()">
+                <span>Given user is on SendPro Enterprise home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_clicks_button(java.lang.String)">
+                <span>When user clicks "Add Store" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.add_store_modal_pop_up_should_open()">
+                <span>Then Add Store Modal pop up should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.select_store_label_should_be_displayed()">
+                <span>And Select Store Label should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.select_store_dropdwon_should_be_displayed()">
+                <span>And Select Store dropdwon should be displayed</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.user_selects_store_option_from_dropdown(java.lang.String)">
+                <span>When user selects "Woo-Commerce" store option from dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.user_enters_woo_commerce_onboard_details(io.cucumber.datatable.DataTable)">
+                <span>And user enters WooCommerce onboard details</span>
+      <div><table class='markup-table table '><tr><td>store_url</td><td>store_key</td></tr><tr><td>https://sendprowoocom.azurewebsites.net</td><td>ajshjashdjsa</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.click_on_register_button_for_woocommerce()">
+                <span>And Click on Register button for woocommerce</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.AddWooCommerceStoreSteps.error_message_should_display_on_woocommerce_add_store_window(java.lang.String)">
+                <span>Then "The value of parameter 'store_key' contains unacceptable characters; The value must match the pattern '/^[0-9a-z]{32}$/'" error message should display on woocommerce add store window</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Print Label Feature of SPE Ecomm Application</p>
+            <p class="text-sm">
+              <span>16:04:29 PM</span> / <span>00:03:05:453</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Print Label Feature of SPE Ecomm Application</h5>
+<span class='badge badge-success'>02.15.2022 16:04:29</span>
+<span class='badge badge-danger'>02.15.2022 16:07:35</span>
+<span class='badge badge-default'>00:03:05:453</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Verify user should able to rate transaction for WooCommerce order</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_enters_valid_username_and_password()">
+                <span>When user enters valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.click_on_sign_in_button()">
+                <span>And click on sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open()">
+                <span>Then SendPro Enterprise home page should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_is_on_send_pro_enterprise_home_page()">
+                <span>And user is on SendPro Enterprise home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_is_on_new_order_search_tab()">
+                <span>When user is on NewOrder Search tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_enters_from_date_and_to_date(io.cucumber.datatable.DataTable)">
+                <span>And user enters FromDate</span>
+      <div><table class='markup-table table '><tr><td>FromDate</td></tr><tr><td>10/04/2021</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_fields_dropdown()">
+                <span>And user clicks on Fields dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_selects_from_the_fields_dropdown(java.lang.String)">
+                <span>And user selects "Order Number" from the fields dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_operator_dropdown()">
+                <span>And user clicks on Operator dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_selects_from_the_operator_dropdown(java.lang.String)">
+                <span>And user selects "Equal To" from the operator dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_verify_that_source_as_exists_after_sync_order(java.lang.String,java.lang.String,java.lang.String)">
+                <span>And user verify that column "Order Number" as "206" exists after sync order for "Order Number"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.verify_column_should_show(java.lang.String,java.lang.String)">
+                <span>Then verify "Order Number" column should show "206"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_clicks_first_row_on_search_results()">
+                <span>When user clicks first row on search results</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.print_label_page_should_open_with_text_as(java.lang.String)">
+                <span>Then Print label page should open with text as "Harvey Publication"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_checks_in_field(java.lang.String,java.lang.String)">
+                <span>And user checks  "081" in "input_weight_in_oz" field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_enters_in_field(java.lang.String,java.lang.String)">
+                <span>And user enters "1" in "length_input" field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_enters_in_field(java.lang.String,java.lang.String)">
+                <span>And user enters "1" in "width_input" field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_enters_in_field(java.lang.String,java.lang.String)">
+                <span>And user enters "1" in "height_input" field</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.verify_rate_button_should_be_enabled()">
+                <span>And verify rate button should be enabled</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_selects_carrier_as(java.lang.String)">
+                <span>And user selects Carrier as "UPS API"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_clicks_on_rate_button()">
+                <span>When user clicks on rate button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.total_cost_should_get_displayed_in_shipping_summary_section()">
+                <span>Then total cost should get displayed in Shipping Summary section</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>Verify Ship To data on print label page for WooCommerce</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_enters_valid_username_and_password()">
+                <span>When user enters valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.click_on_sign_in_button()">
+                <span>And click on sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open()">
+                <span>Then SendPro Enterprise home page should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_is_on_send_pro_enterprise_home_page()">
+                <span>And user is on SendPro Enterprise home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_is_on_new_order_search_tab()">
+                <span>When user is on NewOrder Search tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_enters_from_date_and_to_date(io.cucumber.datatable.DataTable)">
+                <span>And user enters FromDate</span>
+      <div><table class='markup-table table '><tr><td>FromDate</td></tr><tr><td>10/04/2021</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_fields_dropdown()">
+                <span>And user clicks on Fields dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_selects_from_the_fields_dropdown(java.lang.String)">
+                <span>And user selects "Order Number" from the fields dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_operator_dropdown()">
+                <span>And user clicks on Operator dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_selects_from_the_operator_dropdown(java.lang.String)">
+                <span>And user selects "Equal To" from the operator dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_verify_that_source_as_exists_after_sync_order(java.lang.String,java.lang.String,java.lang.String)">
+                <span>And user verify that column "Order Number" as "206" exists after sync order for "Order Number"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.verify_column_should_show(java.lang.String,java.lang.String)">
+                <span>Then verify "Order Number" column should show "206"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_clicks_first_row_on_search_results()">
+                <span>When user clicks first row on search results</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.print_label_page_should_open_with_text_as(java.lang.String)">
+                <span>Then Print label page should open with text as "Harvey Publication"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.verify_should_display(java.lang.String,java.lang.String)">
+                <span>And verify "ship_to_attention" should display "William Harvey"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.verify_should_display(java.lang.String,java.lang.String)">
+                <span>And verify "ship_to_company" should display "Harvey Publication"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.verify_should_display(java.lang.String,java.lang.String)">
+                <span>And verify "ship_to_addressline1" should display "4 Pennsylvania Plaza, New York, NY"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.verify_should_display(java.lang.String,java.lang.String)">
+                <span>And verify "ship_to_city" should display "Newyork"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.verify_should_display(java.lang.String,java.lang.String)">
+                <span>And verify "ship_to_state" should display "NEW YORK"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.verify_should_display(java.lang.String,java.lang.String)">
+                <span>And verify "ship_to_zipcode" should display "10001"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.verify_should_display(java.lang.String,java.lang.String)">
+                <span>And verify "ship_to_country" should display "UNITED STATES"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.verify_should_display(java.lang.String,java.lang.String)">
+                <span>And verify "ship_to_phone" should display "2128920292"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.verify_should_display(java.lang.String,java.lang.String)">
+                <span>And verify "ship_to_email" should display "manjitkumar.dahiya@pb.com"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="181"><span class="badge log fail-bg mr-2">Fail</span>Verify user should able to Print transaction for WooCommerce</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_enters_valid_username_and_password()">
+                <span>When user enters valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.click_on_sign_in_button()">
+                <span>And click on sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open()">
+                <span>Then SendPro Enterprise home page should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_is_on_send_pro_enterprise_home_page()">
+                <span>And user is on SendPro Enterprise home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_is_on_new_order_search_tab()">
+                <span>When user is on NewOrder Search tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_enters_from_date_and_to_date(io.cucumber.datatable.DataTable)">
+                <span>And user enters FromDate</span>
+      <div><table class='markup-table table '><tr><td>FromDate</td></tr><tr><td>10/04/2021</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_fields_dropdown()">
+                <span>And user clicks on Fields dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_selects_from_the_fields_dropdown(java.lang.String)">
+                <span>And user selects "Order Number" from the fields dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_operator_dropdown()">
+                <span>And user clicks on Operator dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_selects_from_the_operator_dropdown(java.lang.String)">
+                <span>And user selects "Equal To" from the operator dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_verify_that_source_as_exists_after_sync_order(java.lang.String,java.lang.String,java.lang.String)">
+                <span>And user verify that column "Order Number" as "207" exists after sync order for "Order Number"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.verify_column_should_show(java.lang.String,java.lang.String)">
+                <span>Then verify "Order Number" column should show "207"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_clicks_first_row_on_search_results()">
+                <span>When user clicks first row on search results</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.print_label_page_should_open_with_text_as(java.lang.String)">
+                <span>Then Print label page should open with text as "Harvey Publication"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_checks_in_field(java.lang.String,java.lang.String)">
+                <span>And user checks  "2" in "input_weight_in_lb" field</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected [] but found [2]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.sendProEnterprise.steps.PrintLabelSteps.user_checks_in_field(PrintLabelSteps.java:296)
+	at ?.user checks  "2" in "input_weight_in_lb" field(file:///C:/Users/ad426kh/eclipse-workspace2/SendProEnterpriseUIAutomation/src/test/resources/features/PrintLabel.feature:266)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_checks_in_field(java.lang.String,java.lang.String)">
+                <span>And user checks  "844" in "input_weight_in_oz" field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_enters_in_field(java.lang.String,java.lang.String)">
+                <span>And user enters "1" in "length_input" field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_enters_in_field(java.lang.String,java.lang.String)">
+                <span>And user enters "1" in "width_input" field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_enters_in_field(java.lang.String,java.lang.String)">
+                <span>And user enters "1" in "height_input" field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.verify_rate_button_should_be_enabled()">
+                <span>And verify rate button should be enabled</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_selects_carrier_as(java.lang.String)">
+                <span>And user selects Carrier as "FedEx Web Services"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_clicks_on_rate_button()">
+                <span>When user clicks on rate button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.total_cost_should_get_displayed_in_shipping_summary_section()">
+                <span>Then total cost should get displayed in Shipping Summary section</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.verify_print_button_is_enabled()">
+                <span>And verify print button is enabled</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_clicks_on_print_button()">
+                <span>When user clicks on print button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.print_tab_should_open()">
+                <span>Then print tab should open</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_clicks_on_show_result_button()">
+                <span>When user clicks on show result button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.processed_order_tab_should_present()">
+                <span>Then Processed Order tab should present</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_clicks_on_processed_order_tab()">
+                <span>And user clicks on processed order tab</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.processed_order_tab_should_open()">
+                <span>Then Processed order tab should open</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_enters_text_from_search_for_package(io.cucumber.datatable.DataTable)">
+                <span>And user enters text from Search for package</span>
+      <div><table class='markup-table table '><tr><td>data</td></tr><tr><td>207</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_click_on_search_proccesed_order_button()">
+                <span>And user click on search proccesed order button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.check_the_search_results_should_display_results_for_column_is(java.lang.String,java.lang.String)">
+                <span>Then check the search results should display results for column "Order #" is "207"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>com.sendProEnterprise.steps.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Verify_user_should_able_to_Print_transaction_for_WooCommerce
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded4.png' src="../embedded4.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="184"><span class="badge log fail-bg mr-2">Fail</span>Verify Launch view APP button is enabled on processed order tab</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_enters_valid_username_and_password()">
+                <span>When user enters valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.click_on_sign_in_button()">
+                <span>And click on sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open()">
+                <span>Then SendPro Enterprise home page should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_is_on_send_pro_enterprise_home_page()">
+                <span>And user is on SendPro Enterprise home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_is_on_new_order_search_tab()">
+                <span>When user is on NewOrder Search tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_enters_from_date_and_to_date(io.cucumber.datatable.DataTable)">
+                <span>And user enters FromDate</span>
+      <div><table class='markup-table table '><tr><td>FromDate</td></tr><tr><td>10/04/2021</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_fields_dropdown()">
+                <span>And user clicks on Fields dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_selects_from_the_fields_dropdown(java.lang.String)">
+                <span>And user selects "Order Number" from the fields dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_operator_dropdown()">
+                <span>And user clicks on Operator dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_selects_from_the_operator_dropdown(java.lang.String)">
+                <span>And user selects "Equal To" from the operator dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_clicks_on_processed_order_tab_on_search_order_page()">
+                <span>When user clicks on processed order tab on Search Order Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.processed_order_tab_should_open()">
+                <span>Then Processed order tab should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_enters_text_from_search_for_package(io.cucumber.datatable.DataTable)">
+                <span>And user enters text from Search for package</span>
+      <div><table class='markup-table table '><tr><td>data</td></tr><tr><td>208</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_click_on_search_proccesed_order_button()">
+                <span>And user click on search proccesed order button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.check_the_search_results_should_display_results_for_column_is(java.lang.String,java.lang.String)">
+                <span>Then check the search results should display results for column "Order #" is "208"</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@id = 'table_processedorder']//table[@class='pbTable-tableHead']/thead/tr/th[@title = 'Order #']/ancestor::div[@class = 'pbTable-tableContent table-header-container']//following-sibling::div[1]/table/tbody/tr[1]/td[@title = '208']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'IN-DWT04D3-10', ip: '192.168.29.43', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 95.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20211109194756, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 30884, moz:profile: C:\Users\ad426kh\AppData\Lo..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3acb4ddb-cfca-4abf-927d-7ccd47887a60
+*** Element info: {Using=xpath, value=//div[@id = 'table_processedorder']//table[@class='pbTable-tableHead']/thead/tr/th[@title = 'Order #']/ancestor::div[@class = 'pbTable-tableContent table-header-container']//following-sibling::div[1]/table/tbody/tr[1]/td[@title = '208']}
+	at jdk.internal.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.sendProEnterprise.pages.BasePage.getWebElementThroughXpath(BasePage.java:178)
+	at com.sendProEnterprise.pages.PrintLabelPage.isDataExists(PrintLabelPage.java:203)
+	at com.sendProEnterprise.steps.PrintLabelSteps.check_the_search_results_should_display_results_for_column_is(PrintLabelSteps.java:26)
+	at ?.check the search results should display results for column "Order #" is "208"(file:///C:/Users/ad426kh/eclipse-workspace2/SendProEnterpriseUIAutomation/src/test/resources/features/PrintLabel.feature:297)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.check_the_launch_view_app_button_is_enabled()">
+                <span>And check the launch view APP button is enabled</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>com.sendProEnterprise.steps.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Verify_Launch_view_APP_button_is_enabled_on_processed_order_tab
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded1.png' src="../embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="187"><span class="badge log fail-bg mr-2">Fail</span>Verify when user clicks on Launch view app button and search already processed order then order should get displayed on search results</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_enters_valid_username_and_password()">
+                <span>When user enters valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.click_on_sign_in_button()">
+                <span>And click on sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open()">
+                <span>Then SendPro Enterprise home page should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_is_on_send_pro_enterprise_home_page()">
+                <span>And user is on SendPro Enterprise home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_is_on_new_order_search_tab()">
+                <span>When user is on NewOrder Search tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_enters_from_date_and_to_date(io.cucumber.datatable.DataTable)">
+                <span>And user enters FromDate</span>
+      <div><table class='markup-table table '><tr><td>FromDate</td></tr><tr><td>10/04/2021</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_fields_dropdown()">
+                <span>And user clicks on Fields dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_selects_from_the_fields_dropdown(java.lang.String)">
+                <span>And user selects "Order Number" from the fields dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_operator_dropdown()">
+                <span>And user clicks on Operator dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_selects_from_the_operator_dropdown(java.lang.String)">
+                <span>And user selects "Equal To" from the operator dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_clicks_on_processed_order_tab_on_search_order_page()">
+                <span>When user clicks on processed order tab on Search Order Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.processed_order_tab_should_open()">
+                <span>Then Processed order tab should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_enters_text_from_search_for_package(io.cucumber.datatable.DataTable)">
+                <span>And user enters text from Search for package</span>
+      <div><table class='markup-table table '><tr><td>data</td></tr><tr><td>208</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_click_on_search_proccesed_order_button()">
+                <span>And user click on search proccesed order button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.check_the_search_results_should_display_results_for_column_is(java.lang.String,java.lang.String)">
+                <span>Then check the search results should display results for column "Order #" is "208"</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@id = 'table_processedorder']//table[@class='pbTable-tableHead']/thead/tr/th[@title = 'Order #']/ancestor::div[@class = 'pbTable-tableContent table-header-container']//following-sibling::div[1]/table/tbody/tr[1]/td[@title = '208']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'IN-DWT04D3-10', ip: '192.168.29.43', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 95.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20211109194756, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 28440, moz:profile: C:\Users\ad426kh\AppData\Lo..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 03def56e-bdeb-4d02-b4d2-6be99954de04
+*** Element info: {Using=xpath, value=//div[@id = 'table_processedorder']//table[@class='pbTable-tableHead']/thead/tr/th[@title = 'Order #']/ancestor::div[@class = 'pbTable-tableContent table-header-container']//following-sibling::div[1]/table/tbody/tr[1]/td[@title = '208']}
+	at jdk.internal.reflect.GeneratedConstructorAccessor26.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.sendProEnterprise.pages.BasePage.getWebElementThroughXpath(BasePage.java:178)
+	at com.sendProEnterprise.pages.PrintLabelPage.isDataExists(PrintLabelPage.java:203)
+	at com.sendProEnterprise.steps.PrintLabelSteps.check_the_search_results_should_display_results_for_column_is(PrintLabelSteps.java:26)
+	at ?.check the search results should display results for column "Order #" is "208"(file:///C:/Users/ad426kh/eclipse-workspace2/SendProEnterpriseUIAutomation/src/test/resources/features/PrintLabel.feature:308)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.check_the_launch_view_app_button_is_enabled()">
+                <span>And check the launch view APP button is enabled</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_clicks_on_launch_view_app()">
+                <span>When user clicks on launch view APP</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.view_app_window_should_open()">
+                <span>Then view app window should open</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_enters_text_to_search_order_in_view_app(io.cucumber.datatable.DataTable)">
+                <span>And user enters text to search order in view app</span>
+      <div><table class='markup-table table '><tr><td>data</td></tr><tr><td>208</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.user_click_on_search_view_app_button()">
+                <span>Then user click on search view app button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.PrintLabelSteps.check_the_search_results_of_view_app_should_display_results_for_column_is(java.lang.String,java.lang.String)">
+                <span>Then check the search results of view app should display results for column "Order #" is "208"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>com.sendProEnterprise.steps.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Verify_when_user_clicks_on_Launch_view_app_button_and_search_already_processed_order_then_order_should_get_displayed_on_search_results
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded3.png' src="../embedded3.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="190"><span class="badge log pass-bg mr-2">Pass</span>Verify when user rate and print the transaction it should get removed from New order</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_enters_valid_username_and_password()">
+                <span>When user enters valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.click_on_sign_in_button()">
+                <span>And click on sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open()">
+                <span>Then SendPro Enterprise home page should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_is_on_send_pro_enterprise_home_page()">
+                <span>And user is on SendPro Enterprise home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_is_on_new_order_search_tab()">
+                <span>When user is on NewOrder Search tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_enters_from_date_and_to_date(io.cucumber.datatable.DataTable)">
+                <span>And user enters FromDate</span>
+      <div><table class='markup-table table '><tr><td>FromDate</td></tr><tr><td>10/04/2021</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_fields_dropdown()">
+                <span>And user clicks on Fields dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_selects_from_the_fields_dropdown(java.lang.String)">
+                <span>And user selects "Order Number" from the fields dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_operator_dropdown()">
+                <span>And user clicks on Operator dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_selects_from_the_operator_dropdown(java.lang.String)">
+                <span>And user selects "Equal To" from the operator dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_enters_text_from_search_for_value(io.cucumber.datatable.DataTable)">
+                <span>When user enters text from Search for value</span>
+      <div><table class='markup-table table '><tr><td>data</td></tr><tr><td>208</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_add_button()">
+                <span>And User clicks on Add button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_search_button()">
+                <span>And user clicks on Search button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.verify_no_rows_should_be_displayed_in_search_results()">
+                <span>Then verify no rows should be displayed in Search Results</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="196"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Verify Search Order Feature of SPE Ecomm Application</p>
+            <p class="text-sm">
+              <span>16:05:33 PM</span> / <span>00:00:59:715</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Verify Search Order Feature of SPE Ecomm Application</h5>
+<span class='badge badge-success'>02.15.2022 16:05:33</span>
+<span class='badge badge-danger'>02.15.2022 16:06:33</span>
+<span class='badge badge-default'>00:00:59:715</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=196</span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="197"><span class="badge log pass-bg mr-2">Pass</span>Verify user is able to Search using Source as woocommerce from Search from Value</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_enters_valid_username_and_password()">
+                <span>When user enters valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.click_on_sign_in_button()">
+                <span>And click on sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open()">
+                <span>Then SendPro Enterprise home page should open</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_is_on_send_pro_enterprise_home_page()">
+                <span>Given user is on SendPro Enterprise home Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_is_on_new_order_search_tab()">
+                <span>When user is on NewOrder Search tab</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_enters_from_date_and_to_date(io.cucumber.datatable.DataTable)">
+                <span>And user enters FromDate</span>
+      <div><table class='markup-table table '><tr><td>FromDate</td></tr><tr><td>10/04/2021</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_verify_that_source_as_exists_after_sync_order(java.lang.String,java.lang.String,java.lang.String)">
+                <span>And user verify that column "Marketplace" as "WooCommerce" exists after sync order for "Source"</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.verify_column_should_show(java.lang.String,java.lang.String)">
+                <span>Then verify "Marketplace" column should show "WooCommerce"</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="203"><span class="badge log fail-bg mr-2">Fail</span>Verify user is able to Search using order number for woocommerce and validate order details</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_is_on_login_page()">
+                <span>Given user is on login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.user_enters_valid_username_and_password()">
+                <span>When user enters valid username and password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.sendProEnterprise.steps.LoginPageSteps.click_on_sign_in_button()">
+                <span>And click on sign in button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open()">
+                <span>Then SendPro Enterprise home page should open</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:819)
+	at org.testng.Assert.assertEquals(Assert.java:829)
+	at com.sendProEnterprise.steps.LoginPageSteps.send_pro_enterprise_home_page_should_open(LoginPageSteps.java:88)
+	at ?.SendPro Enterprise home page should open(file:///C:/Users/ad426kh/eclipse-workspace2/SendProEnterpriseUIAutomation/src/test/resources/features/SearchOrders.feature:7)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SendProHomePageSteps.user_is_on_send_pro_enterprise_home_page()">
+                <span>Given user is on SendPro Enterprise home Page</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_is_on_new_order_search_tab()">
+                <span>When user is on NewOrder Search tab</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_enters_from_date_and_to_date(io.cucumber.datatable.DataTable)">
+                <span>And user enters FromDate</span>
+      <div><table class='markup-table table '><tr><td>FromDate</td></tr><tr><td>10/04/2021</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_verify_that_source_as_exists_after_sync_order(java.lang.String,java.lang.String,java.lang.String)">
+                <span>And user verify that column "Marketplace" as "WooCommerce" exists after sync order for "Source"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.verify_column_should_show(java.lang.String,java.lang.String)">
+                <span>Then verify "Marketplace" column should show "WooCommerce"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_clear_button()">
+                <span>And User clicks on clear button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_fields_dropdown()">
+                <span>And user clicks on Fields dropdown</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_selects_from_the_fields_dropdown(java.lang.String)">
+                <span>And user selects "Order Number" from the fields dropdown</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_operator_dropdown()">
+                <span>And user clicks on Operator dropdown</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_selects_from_the_operator_dropdown(java.lang.String)">
+                <span>And user selects "Equal To" from the operator dropdown</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_enters_text_from_search_for_value(io.cucumber.datatable.DataTable)">
+                <span>And user enters text from Search for value</span>
+      <div><table class='markup-table table '><tr><td>data</td></tr><tr><td>206</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_add_button()">
+                <span>And User clicks on Add button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.user_clicks_on_search_button()">
+                <span>And user clicks on Search button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.verify_column_should_show(java.lang.String,java.lang.String)">
+                <span>Then verify "Order Number" column should show "206"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.verify_column_should_show(java.lang.String,java.lang.String)">
+                <span>And verify "Receiver" column should show "William Harvey"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.verify_column_should_show(java.lang.String,java.lang.String)">
+                <span>And verify "Marketplace" column should show "WooCommerce"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.verify_column_should_show(java.lang.String,java.lang.String)">
+                <span>And verify "Receiver Address Line1" column should show "4 Pennsylvania Plaza, New York, NY"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.verify_column_should_show(java.lang.String,java.lang.String)">
+                <span>And verify "Receiver City" column should show "Newyork"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.sendProEnterprise.steps.SearchStoreSteps.verify_column_should_show(java.lang.String,java.lang.String)">
+                <span>And verify "Receiver State" column should show "NY"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>com.sendProEnterprise.steps.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Verify_user_is_able_to_Search_using_order_number_for_woocommerce_and_validate_order_details
+          <div class="row mb-3"><div class="col-md-3">
+    <img data-featherlight='../embedded2.png' src="../embedded2.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">5</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">@PrintLabelWooCommerce</p>
+<p class="duration text-sm">6 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@PrintLabelWooCommerce</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='9'>Verify user should able to rate transaction for WooCommerce order</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify user should able to rate transaction for WooCommerce order</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='10'>Verify Ship To data on print label page for WooCommerce</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify Ship To data on print label page for WooCommerce</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:05:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='181'>Verify user should able to Print transaction for WooCommerce</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify user should able to Print transaction for WooCommerce</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:05:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='184'>Verify Launch view APP button is enabled on processed order tab</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify Launch view APP button is enabled on processed order tab</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:05:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='187'>Verify when user clicks on Launch view app button and search already processed order then order should get displayed on search results</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify when user clicks on Launch view app button and search already processed order then order should get displayed on search results</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:05:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='190'>Verify when user rate and print the transaction it should get removed from New order</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify when user rate and print the transaction it should get removed from New order</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>9</span>
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@Sanity</p>
+<p class="duration text-sm">11 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Sanity</h4>
+<span status="pass" class='badge log pass-bg'>9 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify text of WooCommerce hover icons Add Store pop up window</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Verify text of WooCommerce hover icons Add Store pop up window</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Verify text of WooCommerce store labels Add Store pop up window</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Verify text of WooCommerce store labels Add Store pop up window</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='4'>Verify user is able to select woocommerce store from Select Store dropdown</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Verify user is able to select woocommerce store from Select Store dropdown</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='5'>Validate Onboarding success message when user onboard the woocommerce store and validate new store should be displayed on view store</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Validate Onboarding success message when user onboard the woocommerce store and validate new store should be displayed on view store</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='6'>Validate Error message when user enters invalid store url and click on register button</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Validate Error message when user enters invalid store url and click on register button</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='7'>Validate Error message when user enters blank store key and click on register button</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Validate Error message when user enters blank store key and click on register button</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>Validate Error message when user click on register button without entering required woocommerce store details</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Validate Error message when user click on register button without entering required woocommerce store details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='17'>Validate Error message when user enters invalid store key and click on register button</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Validate Error message when user enters invalid store key and click on register button</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:05:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='184'>Verify Launch view APP button is enabled on processed order tab</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify Launch view APP button is enabled on processed order tab</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:05:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='187'>Verify when user clicks on Launch view app button and search already processed order then order should get displayed on search results</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify when user clicks on Launch view app button and search already processed order then order should get displayed on search results</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:05:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='190'>Verify when user rate and print the transaction it should get removed from New order</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify when user rate and print the transaction it should get removed from New order</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>8</span>
+</span>
+<p class="name">@AddWooCommerceStore</p>
+<p class="duration text-sm">8 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@AddWooCommerceStore</h4>
+<span status="pass" class='badge log pass-bg'>8 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify text of WooCommerce hover icons Add Store pop up window</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Verify text of WooCommerce hover icons Add Store pop up window</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Verify text of WooCommerce store labels Add Store pop up window</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Verify text of WooCommerce store labels Add Store pop up window</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='4'>Verify user is able to select woocommerce store from Select Store dropdown</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Verify user is able to select woocommerce store from Select Store dropdown</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='5'>Validate Onboarding success message when user onboard the woocommerce store and validate new store should be displayed on view store</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Validate Onboarding success message when user onboard the woocommerce store and validate new store should be displayed on view store</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='6'>Validate Error message when user enters invalid store url and click on register button</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Validate Error message when user enters invalid store url and click on register button</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='7'>Validate Error message when user enters blank store key and click on register button</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Validate Error message when user enters blank store key and click on register button</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>Validate Error message when user click on register button without entering required woocommerce store details</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Validate Error message when user click on register button without entering required woocommerce store details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='17'>Validate Error message when user enters invalid store key and click on register button</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Validate Error message when user enters invalid store key and click on register button</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@SearchWooCommerceStore</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@SearchWooCommerceStore</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:05:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='196' id='197'>Verify user is able to Search using Source as woocommerce from Search from Value</a>
+<div class="">
+<span class="badge badge-default">Verify Search Order Feature of SPE Ecomm Application.Verify user is able to Search using Source as woocommerce from Search from Value</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:05:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='196' id='203'>Verify user is able to Search using order number for woocommerce and validate order details</a>
+<div class="">
+<span class="badge badge-default">Verify Search Order Feature of SPE Ecomm Application.Verify user is able to Search using order number for woocommerce and validate order details</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>12</span>
+<span class='badge log badge-danger'>4</span>
+</span>
+<p class="name">@WooCommerce</p>
+<p class="duration text-sm">16 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@WooCommerce</h4>
+<span status="pass" class='badge log pass-bg'>12 passed</span>
+<span status="fail" class='badge log badge-danger'>4 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify text of WooCommerce hover icons Add Store pop up window</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Verify text of WooCommerce hover icons Add Store pop up window</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Verify text of WooCommerce store labels Add Store pop up window</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Verify text of WooCommerce store labels Add Store pop up window</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='4'>Verify user is able to select woocommerce store from Select Store dropdown</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Verify user is able to select woocommerce store from Select Store dropdown</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='5'>Validate Onboarding success message when user onboard the woocommerce store and validate new store should be displayed on view store</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Validate Onboarding success message when user onboard the woocommerce store and validate new store should be displayed on view store</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='6'>Validate Error message when user enters invalid store url and click on register button</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Validate Error message when user enters invalid store url and click on register button</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='7'>Validate Error message when user enters blank store key and click on register button</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Validate Error message when user enters blank store key and click on register button</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='9'>Verify user should able to rate transaction for WooCommerce order</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify user should able to rate transaction for WooCommerce order</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='10'>Verify Ship To data on print label page for WooCommerce</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify Ship To data on print label page for WooCommerce</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>Validate Error message when user click on register button without entering required woocommerce store details</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Validate Error message when user click on register button without entering required woocommerce store details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:04:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='17'>Validate Error message when user enters invalid store key and click on register button</a>
+<div class="">
+<span class="badge badge-default">Verify Add WooCommerce Store Feature.Validate Error message when user enters invalid store key and click on register button</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:05:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='181'>Verify user should able to Print transaction for WooCommerce</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify user should able to Print transaction for WooCommerce</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:05:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='184'>Verify Launch view APP button is enabled on processed order tab</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify Launch view APP button is enabled on processed order tab</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:05:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='187'>Verify when user clicks on Launch view app button and search already processed order then order should get displayed on search results</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify when user clicks on Launch view app button and search already processed order then order should get displayed on search results</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:05:30 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='190'>Verify when user rate and print the transaction it should get removed from New order</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify when user rate and print the transaction it should get removed from New order</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:05:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='196' id='197'>Verify user is able to Search using Source as woocommerce from Search from Value</a>
+<div class="">
+<span class="badge badge-default">Verify Search Order Feature of SPE Ecomm Application.Verify user is able to Search using Source as woocommerce from Search from Value</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:05:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='196' id='203'>Verify user is able to Search using order number for woocommerce and validate order details</a>
+<div class="">
+<span class="badge badge-default">Verify Search Order Feature of SPE Ecomm Application.Verify user is able to Search using order number for woocommerce and validate order details</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:06:08 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='259'>Then check the search results should display results for column "Order #" is "208"</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify Launch view APP button is enabled on processed order tab.Then check the search results should display results for column "Order #" is "208"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:06:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='269'>Then check the search results should display results for column "Order #" is "208"</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify when user clicks on Launch view app button and search already processed order then order should get displayed on search results.Then check the search results should display results for column "Order #" is "208"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:05:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='196' id='229'>Then SendPro Enterprise home page should open</a>
+<div class="">
+<span class="badge badge-default">Verify Search Order Feature of SPE Ecomm Application.Verify user is able to Search using order number for woocommerce and validate order details.Then SendPro Enterprise home page should open</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:07:23 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='323'>And user checks "2" in "input_weight_in_lb" field</a>
+<div class="">
+<span class="badge badge-default">Verify Print Label Feature of SPE Ecomm Application.Verify user should able to Print transaction for WooCommerce.And user checks "2" in "input_weight_in_lb" field</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@14e9bb345ef7e2ed3a102f271d84e9f0267c88e7/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
